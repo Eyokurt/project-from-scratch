@@ -30,8 +30,8 @@
   <path d="M 1160 602 L 1172 602 L 1172 590" class="corner" />
 
   <!-- Top Badge -->
-  <rect x="80" y="84" width="370" height="32" rx="4" class="badge-bg" />
-  <text x="94" y="105" class="badge-text">UNIVERSAL AGENT SKILL  |  SPEC-DRIVEN ARCHITECTURE</text>
+  <rect x="80" y="84" width="380" height="32" rx="4" class="badge-bg" />
+  <text x="94" y="105" class="badge-text">SPEC-DRIVEN ARCHITECTURE  |  PROJECT DISCOVERY</text>
 
   <!-- Main Title -->
   <text x="80" y="210" class="title">project-from-scratch</text>

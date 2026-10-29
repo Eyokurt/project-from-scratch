@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/og-image.png" alt="project-from-scratch banner" width="100%">
+  <img src="assets/banner.png" alt="project-from-scratch banner" width="100%">
 </p>
 
 # project-from-scratch
