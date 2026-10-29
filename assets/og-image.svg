@@ -31,7 +31,7 @@
 
   <!-- Top Badge -->
   <rect x="80" y="84" width="370" height="32" rx="4" class="badge-bg" />
-  <text x="94" y="105" class="badge-text">ANTIGRAVITY SKILL  |  SPEC-DRIVEN ARCHITECTURE</text>
+  <text x="94" y="105" class="badge-text">UNIVERSAL AGENT SKILL  |  SPEC-DRIVEN ARCHITECTURE</text>
 
   <!-- Main Title -->
   <text x="80" y="210" class="title">project-from-scratch</text>

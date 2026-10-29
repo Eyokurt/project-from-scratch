@@ -205,7 +205,7 @@ project-from-scratch/
 
 ## 10. Usage & Invocation
 
-To initiate a project discovery interview within Antigravity or any compatible agent runtime, trigger with:
+To initiate a project discovery interview within any AI agent or coding assistant runtime, trigger with:
 
 ```markdown
 "I have a new project idea, let's start with project-from-scratch."
