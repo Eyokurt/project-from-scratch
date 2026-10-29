@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/og-image.png" alt="project-from-scratch banner" width="100%">
+</p>
+
 # project-from-scratch
 
 > **Adaptive Project Discovery & Specification Skill: Solidifying Ideas Before Writing Code**
