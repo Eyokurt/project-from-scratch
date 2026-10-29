@@ -38,7 +38,7 @@
 
 ## 4. User Fatigue & Engagement Monitor
 - **Consecutive Monosyllabic / Minimal Answers**: `{{COUNT}}`
-- **Repeated "Bilmiyorum / Fark etmez" Answers**: `{{COUNT}}`
+- **Repeated "I Don't Know / Whatever" Answers**: `{{COUNT}}`
 - **Fatigue Action Threshold Reached?**: `[YES / NO]`  
   *(If YES: Cease deep probing immediately. Propose sensible defaults, record as [ASSUMED], and move to document closure).*
 

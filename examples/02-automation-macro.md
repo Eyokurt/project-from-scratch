@@ -23,9 +23,9 @@
   - Browser automation script logging into the bank portal using existing desktop session cookies.
   - CSV exception report generated in `C:\LedgerSync\Reports` with clear error reasons.
 - **Explicit Non-Goals**:
-  - ❌ No automated submission button click on bank portal (human must click "Submit Transfer").
-  - ❌ No OCR processing on low-resolution scanned image receipts (too error-prone for Phase 1).
-  - ❌ No multi-user login or SaaS multi-tenant infrastructure.
+  - [-] No automated submission button click on bank portal (human must click "Submit Transfer").
+  - [-] No OCR processing on low-resolution scanned image receipts (too error-prone for Phase 1).
+  - [-] No multi-user login or SaaS multi-tenant infrastructure.
 
 ---
 

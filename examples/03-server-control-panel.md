@@ -23,9 +23,9 @@
   - 1-click rolling deploy of Docker Compose manifests with automated rollback if `/healthz` fails within 60s.
   - Role-based permissions: Admin (deploy/stop/rollback) vs. Viewer (logs/metrics only).
 - **Explicit Non-Goals**:
-  - ❌ No dynamic cluster autoscaling (edge hardware is fixed physical nodes).
-  - ❌ No built-in billing, tenant invoicing, or SaaS multi-cloud federation.
-  - ❌ No proprietary storage mesh (relies on host-mounted NVMe/eMMC paths).
+  - [-] No dynamic cluster autoscaling (edge hardware is fixed physical nodes).
+  - [-] No built-in billing, tenant invoicing, or SaaS multi-cloud federation.
+  - [-] No proprietary storage mesh (relies on host-mounted NVMe/eMMC paths).
 
 ---
 

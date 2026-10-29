@@ -24,9 +24,9 @@
   - Local SQLite/JSON persistent run progression and run history.
   - Native controller support with custom rebinding and Steam Deck 60 FPS profile.
 - **Explicit Non-Goals**:
-  - ❌ No multiplayer or co-op netcode (avoids netcode synchronization nightmares).
-  - ❌ No narrative voice acting or complex cinematic dialogue trees.
-  - ❌ No mobile touch controls or in-app microtransactions.
+  - [-] No multiplayer or co-op netcode (avoids netcode synchronization nightmares).
+  - [-] No narrative voice acting or complex cinematic dialogue trees.
+  - [-] No mobile touch controls or in-app microtransactions.
 
 ---
 

@@ -26,9 +26,9 @@ The Vibe-Coder operates on visual intuition, user experience, and fast creative 
 ---
 
 ## Universal Escape Hatch
-If the Vibe-Coder is presented with a choice and replies with *"Bilmiyorum / sen karar ver / fark etmez"* ("I don't know / you decide / doesn't matter"):
+If the Vibe-Coder is presented with a choice and replies with *"I don't know / you decide / doesn't matter"*:
 1. Agent immediately selects the simplest, lowest-friction, standard industry default.
-2. Documents the choice as `[ASSUMED]` with a `[Gözden Geçir]` (Review) tag.
+2. Documents the choice as `[ASSUMED]` with a `[REVIEW_REQUIRED]` tag.
 3. Continues the interview smoothly without making the user feel overwhelmed or incompetent.
 
 ---

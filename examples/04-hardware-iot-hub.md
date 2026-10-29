@@ -13,7 +13,7 @@
 - **Distinguishing Facets**:
   1. *Fail-Safe Closed Valve Relays*: Solenoids are spring-loaded normally closed (NC); loss of power halts water flow immediately.
   2. *Offline Local Rule Engine*: Water schedules run on the ESP32 RTC (Real-Time Clock) without needing cloud NTP.
-  3. *Flash Flash Wear-Leveling*: Telemetry written to SD card using circular buffer to prevent SD flash degradation.
+  3. *Flash Wear-Leveling*: Telemetry written to SD card using circular buffer to prevent SD flash degradation.
 
 ---
 
@@ -23,9 +23,9 @@
   - Driving 4 12V relays for irrigation solenoids and exhaust fans based on local threshold rules.
   - BLE provisioning interface for initial mobile Wi-Fi / MQTT broker pairing.
 - **Explicit Non-Goals**:
-  - ❌ No machine learning computer vision yield prediction models on the microchip.
-  - ❌ No live HD video streaming from the greenhouse canopy.
-  - ❌ No custom injection-molded enclosure design (using standard IP67 off-the-shelf junction box).
+  - [-] No machine learning computer vision yield prediction models on the microchip.
+  - [-] No live HD video streaming from the greenhouse canopy.
+  - [-] No custom injection-molded enclosure design (using standard IP67 off-the-shelf junction box).
 
 ---
 

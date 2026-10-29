@@ -1,195 +1,195 @@
 # project-from-scratch
 
-> **Kod Yazmadan Once Fikri Kristalize Eden, Uyarlanabilir Proje Kesif ve Sartname Sistemi**
+> **Adaptive Project Discovery & Specification Skill: Solidifying Ideas Before Writing Code**
 
 ---
 
-## 1. Problem: "Prompt-and-Pray" Yaklasiminin Kusurlari
+## 1. Problem: The Flaw of "Prompt-and-Pray" Premature Coding
 
-Geliskin yapay zeka modelleriyle calisan kullanicilar siklikla *"bana sunu yap"* diyerek dogrudan kodlama asamasina gecmektedir. Ancak cogu zaman gereksinimler, mimari kisitlar, veri akislari ve sinirlar kullanicinin zihninde henuz netlesmemistir.
+Modern developers and creators working with advanced AI agents frequently start projects by saying *"build me X"*, leaping straight into code generation. In most cases, however, requirements, architectural constraints, data flows, and operational boundaries remain undefined in the user's mind.
 
-Karsilastigi mantiksal bosluklari kendi varsayimlariyla dolduran yapay zeka agent'i, kullanicinin gercek ihtiyacindan sapan bir mimari insa eder. Kullanici bu sapmayi binlerce satir kod yazildiktan sonra fark ettiginde, geri donus hem maliyetli hem de yipratici olur.
+Confronted with logical voids, the AI agent fills in the blanks with its own arbitrary assumptions. The resulting system diverges from the user's true intent. When the user discovers this divergence after thousands of lines of code have already been written, rectifying the architecture is both expensive and demoralizing.
 
-Sorun yapay zekanin kod yazma yeteneginde degil; **projenin temel tasarim ve dusunce asamasinin atlanmasindadir**.
+The root problem is **not a deficiency in coding skill**, but the **omission of the foundational conceptualization phase**.
 
 ```mermaid
 flowchart LR
-    subgraph Premature ["Geleneksel Yaklasim (Premature Coding)"]
+    subgraph Premature ["Traditional Approach (Premature Coding)"]
         direction TB
-        A1["Kullanici: Belirsiz Istek\n('Bana bir X yap')"] --> B1["Agent: Bosluklari Kendi\nVarsayimlariyla Doldurur"]
-        B1 --> C1["Erken Kod Uretimi\n(Yuzlerce Satir Boilerplate)"]
-        C1 --> D1["Gec Fark Edilen Uyumsuzluk\nve Yuksek Geri Donus Maliyeti"]
+        A1["User: Vague Request\n('Build me an X')"] --> B1["Agent: Fills Gaps with\nArbitrary Assumptions"]
+        B1 --> C1["Premature Code Generation\n(Hundreds of Lines of Boilerplate)"]
+        C1 --> D1["Late-Discovered Misalignment\n& Expensive Rework Costs"]
     end
 
-    subgraph DiscoveryFirst ["project-from-scratch Yaklasimi"]
+    subgraph DiscoveryFirst ["project-from-scratch Approach"]
         direction TB
-        A2["Kullanici: Ham Fikir"] --> B2["Sokratik ve Uyarlanabilir\nMülakat Sureci"]
-        B2 --> C2["Mimarinin ve Sinirlarin\nCanli Taslakta Kristalizasyonu"]
-        C2 --> D2["PROJECT.md ve DECISIONS.md\n(Eksiksiz Insan Onayi)"]
-        D2 --> E2["Sifir Varsayim Sapmasiyla\nGüvenli Kodlama Asamasi"]
+        A2["User: Raw Idea"] --> B2["Socratic & Adaptive\nDiscovery Interview"]
+        B2 --> C2["Architecture & Scope Boundaries\nSolidify in Live Draft"]
+        C2 --> D2["PROJECT.md & DECISIONS.md\n(Full Human Approval)"]
+        D2 --> E2["Zero-Assumption-Drift\nSafe Implementation Phase"]
     end
 ```
 
 ---
 
-## 2. Tek Cumlelik Tanim ve Kapsam Sinirlari
+## 2. One-Sentence Definition & Scope Boundaries
 
-> **Agent, kullaniciya projenin gercek sekli ortaya cikana kadar seviyesine gore uyarlanmis sorular sorar ve tek bir satir bile kod yazmadan, fikri derinlemesine tanimlayan insan tarafindan onaylanabilir bir proje sartnamesi ve mimari karar kaydi uretir.**
+> **The agent conducts an adaptive, highly calibrated discovery interview until the project's true shape solidifies, delivering a comprehensive, human-readable project specification and architecture decision log without writing a single line of code.**
 
-### Kapsam Disi Olan Alanlar (Strict Non-Goals)
-- **Kod Yazimi**: Kaynak kod, scaffolding veya test scripti uretilmez.
-- **Gorev Listesi Cikarma**: Jira, GitHub issues veya sprint gorev listesi hazirlanmaz.
-- **Agent Promptu Hazirlama**: Baska bir yapay zekaya dogrudan beslenecek prompt komut dosyalari yazilmaz.
+### Strict Non-Goals (Out of Scope)
+- **Writing Application Code**: No source code, scaffolding, or test scripts are produced.
+- **Task List Generation**: No Jira tickets, GitHub issues, or sprint backlogs are created.
+- **Downstream Agent Prompt Scripting**: No prompt orchestration files for other AI bots are prepared.
 
-Bu skill'in tek urunu; teknik bir liderin, yatirimcinin veya kullanicinin kendisinin bastan sona okuyup *"Evet, tam olarak insa etmek istedigim sistem bu"* diyebilecegi netlikte bir dokumantasyondur.
+The sole output of this skill is documentation that an engineering lead, investor, or the creator themselves can read from start to finish and declare: *"Yes, this is precisely what I intend to build."*
 
 ---
 
-## 3. Temel Mimari Ilkeler
+## 3. Core Architectural Principles
 
-| Ilke | Aciklama |
+| Principle | Description |
 | :--- | :--- |
-| **Evrensel Proje Tarafsizligi** | Projeyi peşinen standart bir web/mobil SaaS uygulamasi varsaymaz. Oyun, yerel makro scripti, hava bosluklu sunucu paneli veya mikrokontrolcu firmware'i ayni titizlikle ele alinir. |
-| **Sifir Sabit Soru Kalibi** | Hazir soru bankalari agent'i kaliplara hapseder. Sorular, kullanicinin onceki cevaplarindan ve belgedeki en riskli mimari bosluklardan dinamik olarak turetilir. |
-| **Olgunluk Odakli Kapanis** | Sureci keyfi bir soru sayaci veya sure degil; 5 nesnel olgunluk testinin basariyla tamamlanmasi belirler. |
-| **Uyarlanabilir Sorumluluk** | Kullanici seviyesi hangi kararlarin verilecegini degil; **karari kimin verecegini** ve **nasil anlatilacagini** belirler. |
-| **Bilinmeyenlerin Korunumu** | *"Bilmiyorum"* yaniti asla gormezden gelinmez veya gecistirilmez. Gerekcesiyle birlikte `[ASSUMED / GOZDEN GECIR]` etiketiyle kayda gecer. |
+| **Universal Project Neutrality** | Never assumes a standard web or mobile SaaS application by default. An offline retro 2D game, a Windows automation macro, an air-gapped server control panel, or an embedded microcontroller hub are treated with equal rigor. |
+| **Zero Boilerplate Questionnaires** | Static question banks trap agents in narrow templates. Questions derive dynamically from preceding user answers and the highest-risk unresolved architectural gaps. |
+| **Maturity-Driven Completion** | The interview is bounded by 5 objective maturity gates, never by an arbitrary question counter or turn limit. |
+| **Adaptive Responsibility** | User skill level does not change *what* architectural decisions must be made; it changes **who makes them** and **how they are explained**. |
+| **Preservation of Known Unknowns** | An answer of *"I don't know"* is never discarded or glossed over. It is explicitly recorded with its rationale under an `[ASSUMED / REVIEW_REQUIRED]` tag. |
 
 ---
 
-## 4. 8 Asamali Kesif Sureci
+## 4. The 8-Stage Interview Lifecycle
 
 ```mermaid
 flowchart TD
-    S1["Asama 1: Yansit (Mirror)\nKullanicinin fikrini kendi cumleleriyle ozetle ve teyit al"] --> S2["Asama 2: Seviyeyi Ogren (Calibrate)\nVibe-coder, Junior, Mid veya Senior tespiti"]
-    S2 --> S3["Asama 3: Ayirt Edici Tarafi Bul (Distinguish)\nProjeyi emsallerinden ayiran 2-3 spesifik yonu cikar"]
-    S3 --> S4["Asama 4: Canli Taslak Ac (Draft)\nPROJECT.md, DECISIONS.md ve INTERVIEW_STATE.md baslat"]
-    S4 --> S5["Asama 5: Bosluktan Soru Turet (Gap Inquiry)\nGeri donusu en pahali kararlardan baslayarak soru sor"]
-    S5 --> S6["Asama 6: Pre-Mortem Analizi\n'Proje 6 ay sonra basarisiz olduysa sebebi nedir?'"]
-    S6 --> S7["Asama 7: Tutarlilik Kontrolu (Consistency)\nMimari celiskileri ve gizli uyumsuzluklari tara"]
-    S7 --> S8["Asama 8: Kapanis ve Cikti (Delivery)\n5 Olgunluk Kapisini calistir ve belgeleri teslim et"]
+    S1["Stage 1: Reflect (Mirror)\nParaphrase user idea in agent's words and verify"] --> S2["Stage 2: Calibrate Level\nDetect Vibe-coder, Junior, Mid, or Senior persona"]
+    S2 --> S3["Stage 3: Identify Distinguishing Facets\nIsolate 2-3 unique aspects separating project from templates"]
+    S3 --> S4["Stage 4: Open Live Draft\nInitialize PROJECT.md, DECISIONS.md, and INTERVIEW_STATE.md"]
+    S4 --> S5["Stage 5: Derive Questions from Gaps\nInquire based on highest cost-of-reversal decision tree"]
+    S5 --> S6["Stage 6: Pre-Mortem Analysis\n'If this fails 6 months after release, what caused it?'"]
+    S6 --> S7["Stage 7: Systemic Consistency Check\nScan for hidden architectural mismatches and contradictions"]
+    S7 --> S8["Stage 8: Close & Deliver\nVerify all 5 Maturity Exit Gates and finalize documents"]
 
-    S5 -.->|"Yeni Bosluk Tespiti"| S5
-    S6 -.->|"Yeni Risk Ortaya Cikarsa"| S5
-    S7 -.->|"Celiski Varsa Duzeltme"| S5
+    S5 -.->|"New Gap Identified"| S5
+    S6 -.->|"New Fatal Risk Discovered"| S5
+    S7 -.->|"Contradiction Needs Resolution"| S5
 ```
 
-### Surec Adimlarinin Detaylari
+### Stage Details
 
-1. **Yansit (Reflect)**: Kullanici fikrini anlatir. Agent fikri herhangi bir kategoriye sokmadan kendi cumleleriyle ozetler: *"Anladigim kadariyla X kitlesi icin Y problemini cozmek istiyorsun ve sistemin kalbi Z. Dogru mu?"* Kullanici onaylayana kadar derinlesilmez.
-2. **Seviyeyi Ogren (Calibrate Level)**: Kullanici kendini tanimlar. Mülakat esnasinda alan bazli ince ayar yapilir (ornek: backend'de Senior, arayuzde Vibe-Coder).
-3. **Ayirt Edici Tarafi Bul (Identify Distinguishing Facets)**: Standart cozumlerin disina cikan 2-3 alisildik olmayan yon belirlenir. Mülakat derinliginin yuzde 70'i bu cekirdege yonlendirilir.
-4. **Canli Taslak Ac (Open Live Draft)**: Ilk turun ardindan `PROJECT.md`, `DECISIONS.md` ve `INTERVIEW_STATE.md` dosyalari baslatilir. Bilinmeyen her baslik `[ACIK / OPEN]` olarak isaretlenir ve her cevapla birlikte anlik guncellenir.
-5. **Bosluktan Soru Turet (Derive Questions from Gaps)**: Karar agaci mantigiyla, geri donusu en maliyetli ve mimariyi kilitleyen kararlar (veri modeli, bagimliliklar, barindirma yapisi) oncelikle sorulur.
-6. **Pre-Mortem Analizi**: Mülakatin ortasinda ve kapanis oncesinde ters yuz edilmis risk analizi yapilir: *"Bu proje yayina girdikten 6 ay sonra tamamen terk edildiyse en olasi teknik veya operasyonel sebebi neydi?"*
-7. **Sistemik Tutarlilik Kontrolu (Consistency Check)**: Belge kapatilmadan once celiskiler taranir (ornek: "0 dolar butce ile cok bolgeli yonetilen K8s", "Stripe ile odeme ama iade/vergi politikasi yok").
-8. **Kapanis ve Cikti (Closure & Delivery)**: 5 olgunluk kapisi dogrulanarak nihai belgeler sunulur.
+1. **Reflect (Mirror)**: The user describes their initial concept. The agent mirrors it back without premature categorization: *"What I understand is you want to solve [X] for [Y], and the absolute crux is [Z]. Did I capture this accurately?"* No deep questioning begins until the user confirms.
+2. **Calibrate Level**: The user indicates their baseline background. Multi-disciplinary calibration occurs dynamically throughout the interview (e.g., Senior in backend architecture, Vibe-Coder in user interfaces).
+3. **Identify Distinguishing Facets**: Every project has 2-3 unfamiliar, non-standard aspects. 70% of discovery depth focuses on these differentiating factors rather than commodity boilerplate.
+4. **Open Live Draft**: Immediately following Round 1, `PROJECT.md`, `DECISIONS.md`, and `INTERVIEW_STATE.md` are initialized. Unresolved items are marked `[OPEN]` and updated in real time with each answer.
+5. **Derive Questions from Gaps**: Using Decision Tree logic, decisions that are expensive or irreversible to change later (data consistency models, hosting topology, platform constraints) are prioritized over cosmetic details.
+6. **Pre-Mortem Analysis**: Conducted midway and near closure: *"Suppose this project launched, and 6 months from now it completely failed. What was the single most likely technical, operational, or adoption reason?"*
+7. **Systemic Consistency Check**: Scans for internal mismatches (e.g., \$0/mo budget combined with multi-region managed clusters; international billing without refund or tax policies).
+8. **Close & Deliver**: The 5 objective exit gates are validated, and finalized documents are delivered.
 
 ---
 
-## 5. Seviye Sistemi ve Sorumluluk Dagilimi
+## 5. Persona Calibration & Decision Matrix
 
-Seviye farki, hangi sorularin atlanacagini degil; **karari kimin verecegini** ve **terminolojinin nasil kurgulanacagini** belirler.
+User level dictates **who holds decision authority** and **the communication register**, not which decisions exist.
 
 ```mermaid
 flowchart TD
-    subgraph LevelDistribution ["Kullanici Seviyesine Gore Sorumluluk Matrisi"]
+    subgraph LevelDistribution ["Decision Authority Matrix by Persona Tier"]
         direction TB
-        VC["Vibe-Coder\n(Cikti & Deneyim Odakli)"] --> VC_D["Karari Agent Verir\nGerekcesiyle kaydeder, sadece\ndeneyim degisirse tek cumlelik onay alir"]
-        JR["Junior\n(Temel Kavramlara Hakim)"] --> JR_D["Agent 2-3 Secenek Sunar\nKisa arti/eksi listesiyle onerir,\nson secimi kullanici yapar"]
-        MD["Mid-Level\n(Mimari Modelleri Bilen)"] --> MD_D["Birlikte Karara Baglanir\nEndustri standardi baz alinir,\nsapmalar ve trade-off'lar tartisilir"]
-        SR["Senior / Staff\n(Uretim Riski Bilincinde)"] --> SR_D["Karari Kullanici Verir\nAgent seytanin avukati gibi davranir;\ntehdit modeli, goc ve hata modlarini sorar"]
+        VC["Vibe-Coder\n(Outcome & Experience Focused)"] --> VC_D["Agent Decides Technicals\nLogs rationale in DECISIONS.md;\nseeks 1-sentence approval only if UX changes"]
+        JR["Junior\n(Understands Core Terminology)"] --> JR_D["Agent Curates 2-3 Options\nPresents brief pros/cons with recommendation;\nuser makes the selection"]
+        MD["Mid-Level\n(Familiar with Standard Patterns)"] --> MD_D["Collaborative Decision\nSensible baseline proposed;\ntrade-offs and deviations evaluated together"]
+        SR["Senior / Staff\n(Aware of Production Failure Modes)"] --> SR_D["User Decides Architecture\nAgent acts as peer reviewer / Devil's Advocate;\nprobes failure modes, threat models, and migrations"]
     end
 ```
 
-### Evrensel Kacis Kapisi ("Bilmiyorum / Sen Karar Ver")
-Hangi seviyede olursa olsun, kullanici herhangi bir soruda *"Bilmiyorum, sen karar ver"* veya *"Fark etmez"* diyebilir.
-- Agent bekleme yapmaz veya kullaniciyi zorlamaz.
-- En dusuk karmasikliga sahip endustri standardini secer.
-- Karari `DECISIONS.md` dosyasina `Decider: Agent (Delegated)` olarak yazar.
-- `PROJECT.md` uzerinde `[ASSUMED / GOZDEN GECIR]` etiketiyle kaydeder.
+### Universal Escape Hatch ("I Don't Know / You Decide")
+At any persona level, the user may say *"I don't know / you decide / doesn't matter"*:
+- The agent selects the most robust, lowest-complexity industry standard.
+- The choice is logged in `DECISIONS.md` under `Decider: Agent (Delegated)`.
+- The item is marked `[ASSUMED / REVIEW_REQUIRED]` in `PROJECT.md`.
+- The interview continues seamlessly without friction.
 
 ---
 
-## 6. Sabit Kapsam Boyutlari (Scope Checklist)
+## 6. The 6 Immutable Scope Dimensions
 
-Hazir soru listeleri yerine, projenin turunden bagimsiz olarak her sistemde cevaplanmasi zorunlu olan 6 sabit boyut (`dimensions.md`) takip edilir:
+Rather than static question lists, every project must satisfy 6 immutable scope dimensions (`dimensions.md`):
 
 ```mermaid
 flowchart LR
-    D1["1. Hedef Kitle & Problem\nKimin icin, hangi tetikleyici aci?"] --- D2["2. Kapsam Disi Sinirlar\nNe kesinlikle yapilmayacak?"]
-    D2 --- D3["3. Operasyonel Kisitlar\nZaman, butce, platform, beceri"]
-    D3 --- D4["4. Hata Etki Alani\nBozulursa kime ne zarar verir?"]
-    D4 --- D5["5. 'Bitti' Tanimi\nMVP'nin somut basari kriterleri"]
-    D5 --- D6["6. Bilinen Bilinmeyenler\nHangi kabullere dayaniyoruz?"]
+    D1["1. Target Audience & Problem\nWho is this for, and what trigger pain?"] --- D2["2. Non-Goals & Boundaries\nWhat will explicitly NOT be built?"]
+    D2 --- D3["3. Operational Constraints\nTime, budget, platform, team skill"]
+    D3 --- D4["4. Blast Radius & Failure\nIf it breaks, who suffers what damage?"]
+    D4 --- D5["5. Definition of Done\nMeasurable criteria for MVP completion"]
+    D5 --- D6["6. Known Unknowns\nWhat unproven assumptions are we making?"]
 ```
 
 ---
 
-## 7. Mimari Tetikleyici Sistemi (Triggers Heuristic)
+## 7. Architectural Trigger Heuristics
 
-Kullanici mülakat sirasinda belirli kritik kavramlari zikrettiginde, `triggers.md` dosyasindaki mimari risk alarmlari devreye girer. Bunlar kullaniciya dogrudan sorulan kaliplar degil; agent'in mimaride bosluk birakmamak icin kullandigi bilinc alarmlaridir:
+When specific technical concepts emerge in conversation, heuristic risk alerts from `triggers.md` activate internally:
 
-- **Kullanici Kimligi ve Hesaplar**: Oturum stratejisi, hesap kurtarma, cok kiracilik (multi-tenancy), veri silme hakki (KVKK/GDPR).
-- **Odemeler ve Abonelik**: Merchant of Record (MoR), basarisiz odeme takibi (dunning), iade politikalari, cift girisli bakiye defteri.
-- **Kullanici Icerigi (UGC)**: Guvenli yukleme, zararlı yazilim taramasi, dosya boyutu sinirlari, depolama maliyet patlamasi onleme.
-- **Gercek Zamanli Iletisim**: Baglanti kopmasi ve yeniden senkronizasyon, cakisim cozumleme, sunucu sisme (backpressure) kontrolleri.
-- **Otomasyon ve Kazima (Scraping)**: Hedef sistem degisikligi direnci, istek yavaslatma (jitter), aninda acil durdurma anahtari (kill-switch).
-- **Gomulu ve Donanim**: Guc butcesi, kesintili baglanti kuyrugu, guvenli OTA yazilim guncelleme ve geri donus mekanizmasi.
+- **Authentication & User Identity**: Session lifecycles, account recovery, tenant isolation, data deletion rights (GDPR/CCPA).
+- **Billing & Commerce**: Merchant of Record (MoR), dunning management, dispute policies, double-entry ledger bookkeeping.
+- **User-Generated Content (UGC)**: Presigned direct uploads, malware sanitization, storage cost explosion mitigation, moderation queues.
+- **Real-Time State Synchronization**: Connection drops, client state reconciliation, conflict resolution (CRDTs vs. LWW), backpressure limits.
+- **Automation & Scraping**: Selector resilience, request jitter, anti-ban throttling, emergency hardware kill-switch.
+- **Embedded & Hardware**: Power envelopes, intermittent connectivity buffering, dual-bank failsafe OTA firmware updates.
 
 ---
 
-## 8. Bes Asamali Bitis Kapisi (Maturity Exit Gates)
+## 8. Five Objective Maturity Exit Gates
 
-Mülakat keyfi olarak veya kullanici yorulana kadar rastgele uzatilmaz. Asagidaki 5 kapi dogrulandiginda oturum resmi olarak tamamlanir:
+The interview cannot conclude arbitrarily. Progression to delivery requires passing all 5 gates:
 
 ```mermaid
 stateDiagram-v2
-    [*] --> Kapi1: Oturum Ilerler
-    Kapi1: 1. Doygunluk Kapisi (Son 2 turda yeni karar cikmadi)
-    Kapi2: 2. Geri Donusu Pahali Kararlar Kilitlendi
-    Kapi3: 3. Yabanci Okuyucu Testi (Baglamsiz kisi soracak kritik acik bulamaz)
-    Kapi4: 4. Geri Anlatim Onayi (5-6 cumlelik ozete tam onay)
-    Kapi5: 5. Pre-Mortem Tukenisi (Olumcul zaaf kalmadi)
+    [*] --> Gate1: Active Inquiry
+    Gate1: 1. Saturation Gate (No new decisions in last 2 turns)
+    Gate2: 2. Irreversible Decisions Closed or Tagged
+    Gate3: 3. The Stranger Test (Outsider finds no foundational gaps)
+    Gate4: 4. Mirror Paraphrase User Confirmation
+    Gate5: 5. Pre-Mortem Exhaustion (No unmitigated fatal risks)
 
-    Kapi1 --> Kapi2: Gecti
-    Kapi2 --> Kapi3: Gecti
-    Kapi3 --> Kapi4: Gecti
-    Kapi4 --> Kapi5: Gecti
-    Kapi5 --> Tamamlandi: Belgeler Uretildi
+    Gate1 --> Gate2: Pass
+    Gate2 --> Gate3: Pass
+    Gate3 --> Gate4: Pass
+    Gate4 --> Gate5: Pass
+    Gate5 --> Finalized: Output Delivered
 ```
 
-### Cikis Kapilari ve Yorgunluk Yonetimi
-- **Kullanici Istegiyle Cikis**: Kullanici istedigi an *"Burada bitirelim"* diyebilir. Kalan bosluklar varsayim olarak doldurulur ve `[ASSUMED / GOZDEN GECIR]` etiketi alir.
-- **Yorgunluk Algilayici**: Kullanici ust uste 2 veya daha fazla tek kelimelik veya *"fark etmez"* yaniti verirse, agent derin soru sormayi birakir; endustri standartlariyla belgeyi kapatmayi onerir.
-- **Periyodik Kontrol Noktasi**: Yaklasik her 15-20 etkilesimde bir mevcut durumun ozeti gosterilir: *"Su an bu noktadayiz, X konusu mu netlestirelim yoksa varsayimlarla kapatip ciktiyi alalim mi?"*
+### Exit Hatches & Fatigue Mitigation
+- **User-Initiated Stop**: The user may say *"Let's stop here"* at any time. Remaining gaps are converted to documented sensible defaults tagged `[ASSUMED / REVIEW_REQUIRED]`.
+- **Fatigue Detection**: If the user provides 2+ consecutive monosyllabic answers (*"ok"*, *"whatever"*), the agent ceases open questioning and offers to finalize with industry defaults.
+- **Periodic Checkpoint Cadence**: Every 15–20 interactions, a status summary is presented: *"Here is our current specification progress. Shall we investigate [Specific Gap] or wrap up with documented assumptions?"*
 
 ---
 
-## 9. Cikti Belgeleri ve Dosya Hiyerarsisi
+## 9. Output Artifacts & Directory Structure
 
-Mülakatin tamamlanmasiyla birlikte projede su 3 dosya hazir hale gelir:
+Upon completion, three core documents are finalized in the repository:
 
-1. **`PROJECT.md`**: Vizyon, hedef kitle, kapsam ve sinirlar, hata etki alani, projeye ozel dinamik moduller ve basari kriterlerini iceren ana spesifikasyon.
-2. **`DECISIONS.md`**: Yapilan tum secimlerin, elenen alternatiflerin, gerekcelerinin ve karari verenin (Kullanici mi, Agent mi) listelendigi Mimari Karar Kaydi (ADR).
-3. **`INTERVIEW_STATE.md`**: Gorusme sirasinda boyutlarin sagligini, soru sirasini ve doyum durumunu gosteren canli takip dosyasi.
+1. **`PROJECT.md`**: Master specification containing vision, personas, boundaries, blast radius, dynamic project-specific modules, and acceptance gates.
+2. **`DECISIONS.md`**: Architecture Decision Record (ADR) logging all chosen options, rejected alternatives, rationales, and deciders (User vs. Agent).
+3. **`INTERVIEW_STATE.md`**: Real-time tracker maintaining dimension completeness, priority gap queue, and saturation status.
 
 ```
 project-from-scratch/
-├── SKILL.md              # Yontem, akis ve 5 bitis kapisi talimati
-├── README.md             # Kapsamli aciklama ve mimari dokumantasyon
-├── dimensions.md         # 6 sabit kapsam boyutu
-├── triggers.md           # Kritik mimari risk alarmlari
-├── levels/               # Seviye bazli iletisim ve karar dagilim dosyalari
+├── SKILL.md              # Master orchestration instructions and 5 exit gates
+├── README.md             # Repository documentation and architectural philosophy
+├── dimensions.md         # 6 immutable scope dimensions checklist
+├── triggers.md           # Heuristic risk alerts across complex subsystems
+├── levels/               # Persona-specific communication and delegation guides
 │   ├── vibe-coder.md
 │   ├── junior.md
 │   ├── mid.md
 │   └── senior.md
-├── templates/            # Cikti ve durum sablonlari
+├── templates/            # Output document templates
 │   ├── PROJECT.md
 │   ├── DECISIONS.md
 │   └── INTERVIEW_STATE.md
-└── examples/             # Farkli alanlardan ornek zihinsel modeller
+└── examples/             # Reference mental models across diverse domains
     ├── 01-game-roguelike.md
     ├── 02-automation-macro.md
     ├── 03-server-control-panel.md
@@ -199,12 +199,12 @@ project-from-scratch/
 
 ---
 
-## 10. Kullanım ve Calistirma
+## 10. Usage & Invocation
 
-Antigravity icinde yeni bir projeye baslarken su sekilde cagirabilirsiniz:
+To initiate a project discovery interview within Antigravity or any compatible agent runtime, trigger with:
 
 ```markdown
-"Yeni bir proje fikrim var, project-from-scratch ile baslayalim."
-"Fikirden projeye donusturme mülakatini ac."
+"I have a new project idea, let's start with project-from-scratch."
 "Start a new project discovery interview using project-from-scratch."
+"project-from-scratch"
 ```

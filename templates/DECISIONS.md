@@ -2,7 +2,7 @@
 
 > **Purpose**: This log tracks every architectural, infrastructure, and UX decision made during the project discovery interview. It explicitly records **who made the decision** (User vs. Agent), what alternatives were rejected, and the underlying rationale.
 > 
-> *Items marked `Decider: Agent` or `[ASSUMED / GÖZDEN GEÇİR]` allow users or engineering teams to review and override automated recommendations later.*
+> *Items marked `Decider: Agent` or `[ASSUMED / REVIEW_REQUIRED]` allow users or engineering teams to review and override automated recommendations later.*
 
 ---
 

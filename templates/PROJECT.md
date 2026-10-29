@@ -13,7 +13,7 @@
 - **The Core Problem**: What real-world friction, deficit, or desire does this solve?
 - **Why Existing Solutions Fall Short**: What makes current alternatives unacceptable or inadequate for this specific context?
 
-### 1.2 The Distinguishing Facets (Ayırt Edici Yönler)
+### 1.2 The Distinguishing Facets
 What 2–3 unfamiliar, unique, or non-standard qualities separate this project from conventional templates?
 1. **{{FACET_1_NAME}}**: {{FACET_1_DESCRIPTION}}
 2. **{{FACET_2_NAME}}**: {{FACET_2_DESCRIPTION}}
@@ -36,9 +36,9 @@ What 2–3 unfamiliar, unique, or non-standard qualities separate this project f
 
 ### 3.2 Explicit Non-Goals (What Will NOT Be Built)
 *Drawing a strict boundary to prevent feature creep and distraction.*
-- ❌ **{{NON_GOAL_1}}**: Explicitly out of scope and reason why.
-- ❌ **{{NON_GOAL_2}}**: Explicitly out of scope and reason why.
-- ❌ **{{NON_GOAL_3}}**: Explicitly out of scope and reason why.
+- [-] **{{NON_GOAL_1}}**: Explicitly out of scope and reason why.
+- [-] **{{NON_GOAL_2}}**: Explicitly out of scope and reason why.
+- [-] **{{NON_GOAL_3}}**: Explicitly out of scope and reason why.
 
 ---
 
@@ -101,7 +101,7 @@ Phase 1 is officially "DONE" when the following observable criteria are met:
 ## 8. Risks, Assumptions & Open Questions
 ### 8.1 Critical Assumptions (Tagged for Review)
 *Decisions or premises accepted without definitive empirical proof.*
-- `[ASSUMED / GÖZDEN GEÇİR]` **{{ASSUMPTION_1}}**: {{ASSUMPTION_1_DETAILS}} (Rationale: {{ASSUMPTION_1_RATIONALE}})
+- `[ASSUMED / REVIEW_REQUIRED]` **{{ASSUMPTION_1}}**: {{ASSUMPTION_1_DETAILS}} (Rationale: {{ASSUMPTION_1_RATIONALE}})
 
 ### 8.2 Pre-Mortem Findings (Identified Fatal Risks)
 *"Suppose this project failed 6 months after release: why did it die?"*
@@ -111,4 +111,4 @@ Phase 1 is officially "DONE" when the following observable criteria are met:
    *Mitigation / Architectural Defense*: {{FATAL_RISK_2_DEFENSE}}
 
 ### 8.3 Remaining Open Questions (If Concluded Early)
-- `[OPEN / AÇIK]` **{{QUESTION_1}}**: Impact if unresolved.
+- `[OPEN]` **{{QUESTION_1}}**: Impact if unresolved.

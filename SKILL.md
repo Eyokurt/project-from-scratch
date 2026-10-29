@@ -17,9 +17,9 @@ The root problem is **not a deficiency in coding skill**, but the **omission of 
 ### 1.2 Strict Scope Boundaries
 - **Strictly In-Scope**: Socratic questioning, intent extraction, boundary mapping, trade-off analysis, pre-mortem risk identification, and producing a complete project specification (`PROJECT.md`) and architecture decision record (`DECISIONS.md`).
 - **Strictly Out-of-Scope**:
-  - ❌ Writing application source code.
-  - ❌ Generating granular ticketing task lists or sprint backlogs.
-  - ❌ Generating prompt orchestration instructions for downstream coding bots.
+  - [Excluded] Writing application source code.
+  - [Excluded] Generating granular ticketing task lists or sprint backlogs.
+  - [Excluded] Generating prompt orchestration instructions for downstream coding bots.
 - **The Core Product**: A document that an engineer, investor, or the user themselves can read from start to finish and say: *"Yes, this captures exactly what I intend to build."*
 
 ---
@@ -35,7 +35,7 @@ The root problem is **not a deficiency in coding skill**, but the **omission of 
 4. **Adaptive Responsibility (Calibrated Delegation)**:
    - User skill level does **not** change *what* architectural decisions must be made; it changes **who makes them** and **how they are explained**.
 5. **Preservation of Known Unknowns**:
-   - An answer of *"I don't know"* is never dismissed or concealed. It is formally recorded as an explicit assumption tagged with `[ASSUMED / GÖZDEN GEÇİR]`.
+   - An answer of *"I don't know"* is never dismissed or concealed. It is formally recorded as an explicit assumption tagged with `[ASSUMED / REVIEW_REQUIRED]`.
 
 ---
 
@@ -71,7 +71,7 @@ Stage 8: Close & Deliver (Pass all 5 maturity exit gates)
 
 ---
 
-### Stage 1: Reflect (Yansıt)
+### Stage 1: Reflect (Mirror Vision)
 - **Objective**: Internalize the user's vision without prematurely forcing it into a conventional architectural category.
 - **Protocol**:
   1. The user shares their raw idea.
@@ -81,7 +81,7 @@ Stage 8: Close & Deliver (Pass all 5 maturity exit gates)
 
 ---
 
-### Stage 2: Calibrate Level (Seviyeyi Öğren)
+### Stage 2: Calibrate Level
 - **Objective**: Determine the communication register, decision distribution, and technical depth.
 - **Protocol**:
   1. Present the 4 persona tiers cleanly:
@@ -94,7 +94,7 @@ Stage 8: Close & Deliver (Pass all 5 maturity exit gates)
 
 ---
 
-### Stage 3: Identify Distinguishing Facets (Ayırt Edici Tarafı Bul)
+### Stage 3: Identify Distinguishing Facets
 - **Objective**: Pinpoint what makes this project genuinely unique, preventing the interview from wasting time on generic boilerplate.
 - **Protocol**:
   1. Every project has 2–3 unfamiliar, non-standard, or unconventional aspects (e.g. *"real-time local offline fallback"*, *"must execute within a 15MB binary"*, *"emergency hardware kill switch"*).
@@ -103,19 +103,19 @@ Stage 8: Close & Deliver (Pass all 5 maturity exit gates)
 
 ---
 
-### Stage 4: Open Live Draft (Canlı Taslak Aç)
+### Stage 4: Open Live Draft
 - **Objective**: Eliminate invisibility and ground the interview in an evolving artifact.
 - **Protocol**:
   1. Immediately following Round 1, copy and initialize:
      - `PROJECT.md` (from `templates/PROJECT.md`)
      - `DECISIONS.md` (from `templates/DECISIONS.md`)
      - `INTERVIEW_STATE.md` (from `templates/INTERVIEW_STATE.md`)
-  2. Populate known elements; mark unexamined sections explicitly as `[AÇIK / OPEN]`.
+  2. Populate known elements; mark unexamined sections explicitly as `[OPEN]`.
   3. Every subsequent user response updates these files in real time.
 
 ---
 
-### Stage 5: Derive Questions from Gaps (Boşluktan Soru Türet)
+### Stage 5: Derive Questions from Gaps
 - **Objective**: Generate inquiries dynamically using Decision Tree logic.
 - **Protocol**:
   1. Consult [dimensions.md](dimensions.md) to inspect which of the 6 core dimensions contain critical voids.
@@ -127,7 +127,7 @@ Stage 8: Close & Deliver (Pass all 5 maturity exit gates)
 
 ---
 
-### Stage 6: Pre-Mortem (Başarısızlık Analizi)
+### Stage 6: Pre-Mortem (Failure Mode Stress Test)
 - **Objective**: Stress-test the design against blind optimism.
 - **Protocol**:
   - Run once midway through the interview, and once immediately prior to closure:
@@ -136,7 +136,7 @@ Stage 8: Close & Deliver (Pass all 5 maturity exit gates)
 
 ---
 
-### Stage 7: Systemic Consistency Check (Tutarlılık Kontrolü)
+### Stage 7: Systemic Consistency Check
 - **Objective**: Detect invisible architectural contradictions before sealing the document.
 - **Protocol**:
   - Scan the active draft for common systemic mismatches:
@@ -147,11 +147,11 @@ Stage 8: Close & Deliver (Pass all 5 maturity exit gates)
 
 ---
 
-### Stage 8: Close & Deliver (Kapanış ve Çıktı)
+### Stage 8: Close & Deliver
 - **Objective**: Deliver finalized, polished artifacts once all maturity gates pass.
 - **Protocol**:
   1. Run the 5 Maturity Exit Gates.
-  2. Replace all remaining `[OPEN]` tags with resolved decisions or explicit `[ASSUMED / GÖZDEN GEÇİR]` entries.
+  2. Replace all remaining `[OPEN]` tags with resolved decisions or explicit `[ASSUMED / REVIEW_REQUIRED]` entries.
   3. Deliver `PROJECT.md` and `DECISIONS.md`.
 
 ---
@@ -165,10 +165,10 @@ Stage 8: Close & Deliver (Pass all 5 maturity exit gates)
 | **Mid** | Trade-off exploration. Standard industry baseline presented. | **Collaborative Decision**. Discusses whether to deviate from sensible defaults. | [levels/mid.md](levels/mid.md) |
 | **Senior** | Probes deep into failure modes, data migrations, cloud economics, threat models. | **User Decides, Agent Challenges**. Agent acts as Devil's Advocate; no unsolicited basic advice. | [levels/senior.md](levels/senior.md) |
 
-### The Universal Escape Hatch ("Bilmiyorum / Sen Karar Ver")
+### The Universal Escape Hatch ("I Don't Know / You Decide")
 At any level, the user may say *"I don't know / you decide / doesn't matter"*.
 - The agent immediately selects the most robust, lowest-complexity industry standard.
-- The item is recorded in `DECISIONS.md` as `Decider: Agent (Delegated)` and marked `[ASSUMED / GÖZDEN GEÇİR]` in `PROJECT.md`.
+- The item is recorded in `DECISIONS.md` as `Decider: Agent (Delegated)` and marked `[ASSUMED / REVIEW_REQUIRED]` in `PROJECT.md`.
 - The interview continues forward with zero interruption.
 
 ---
@@ -210,12 +210,12 @@ The interview **cannot close** until all five gates are formally verified:
 Interviews can become draining if mismanaged. The agent must strictly respect the following guardrails:
 
 1. **User-Initiated Early Stop**:
-   - If the user says *"Let's finish here"*, *"Yeterli"*, or *"Tamamlayalım"*, stop questioning immediately.
-   - Sweep all remaining `[OPEN]` placeholders, convert them to standard sensible defaults tagged `[ASSUMED / GÖZDEN GEÇİR]`, and deliver the finalized documents.
+   - If the user says *"Let's finish here"*, *"That is enough"*, or *"Let's wrap up"*, stop questioning immediately.
+   - Sweep all remaining `[OPEN]` placeholders, convert them to standard sensible defaults tagged `[ASSUMED / REVIEW_REQUIRED]`, and deliver the finalized documents.
 2. **Fatigue Detection Protocol**:
-   - Signals: 2+ consecutive monosyllabic replies (*"ok"*, *"fark etmez"*, *"yes"*, *"bilmem"*).
+   - Signals: 2+ consecutive monosyllabic replies (*"ok"*, *"whatever"*, *"yes"*, *"dunno"*).
    - Agent action: Cease open-ended inquiry. Provide a concise closing checkpoint:
-     > *"I sense we've covered the core foundation. Rather than diving into minor details, I can populate the remaining operational items with industry-standard defaults marked for your review. Would you like me to finalize the document now?"*
+     > *"I sense we have covered the core foundation. Rather than diving into minor details, I can populate the remaining operational items with industry-standard defaults marked for your review. Would you like me to finalize the document now?"*
 3. **Periodic Checkpoint Cadence**:
    - Every 15–20 interactions, present a high-level summary of resolved dimensions and ask:
      > *"Here is where our specification currently stands. We have solid answers for [X, Y, Z]. Shall we explore [Remaining Gap] or wrap up with documented assumptions?"*
@@ -231,7 +231,7 @@ Interviews can become draining if mismanaged. The agent must strictly respect th
 | **Scope omissions & blindspots** | Forgetting auth, tax, or kill switch requirements. | Heuristic alerts in [triggers.md](triggers.md) + Systemic Consistency Check (Stage 7). |
 | **User misjudges their own skill** | Senior says "junior" or Vibe-coder claims "senior". | Dynamic recalibration throughout the interview based on real technical responses. |
 | **Superficial document ("AI slop")** | Document looks long but lacks concrete engineering substance. | Stranger Test (Gate 3) + Pre-Mortem Analysis (Stage 6) + concrete blast radius requirements. |
-| **"I don't know" breaks the design** | Agent stalls or leaves critical voids empty. | Unknowns recorded as explicit assumptions tagged `[ASSUMED / GÖZDEN GEÇİR]`. |
+| **"I don't know" breaks the design** | Agent stalls or leaves critical voids empty. | Unknowns recorded as explicit assumptions tagged `[ASSUMED / REVIEW_REQUIRED]`. |
 
 ---
 

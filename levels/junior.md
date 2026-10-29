@@ -24,7 +24,7 @@ The Junior Developer understands core programming concepts, standard stacks, and
 - **Who Decides**: The User chooses, guided by the Agent's structured recommendations.
 - **Recording Decisions**: Mark as `Decider: User (Guided Selection)` in `DECISIONS.md`.
 - **Handling Unknowns**:
-  If the user asks *"What do you think is best?"* or *"Hangisi daha mantıklı?"*, the agent adopts the recommended option, logs the rationale, and marks the item `[SOLIDIFIED]`.
+  If the user asks *"What do you think is best?"* or *"Which option makes the most sense?"*, the agent adopts the recommended option, logs the rationale, and marks the item `[SOLIDIFIED]`.
 
 ---
 

@@ -23,9 +23,9 @@
   - Interactive PDF viewer with shared margin commenting and Markdown/LaTeX rendering.
   - Basic reporting queue for community moderators.
 - **Explicit Non-Goals**:
-  - ❌ No native mobile iOS/Android app (responsive web only for MVP).
-  - ❌ No real-time video conferencing or audio breakout rooms.
-  - ❌ No monetization, paywalled subscriptions, or ads in Phase 1.
+  - [-] No native mobile iOS/Android app (responsive web only for MVP).
+  - [-] No real-time video conferencing or audio breakout rooms.
+  - [-] No monetization, paywalled subscriptions, or ads in Phase 1.
 
 ---
 
